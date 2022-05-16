@@ -1,0 +1,1 @@
+let bars=document.querySelector("ion-icon"),nav=document.querySelector(".nav");function menuRemoveClass(){nav.classList.toggle("active")}bars.addEventListener("click",menuRemoveClass);

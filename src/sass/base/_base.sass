@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	font-family: $font_f
+	font-size: 12pt
+	font-weight:  $weight_semi_bold
+
+body
+	&::-webkit-scrollbar
+		width: 15px
+		@include round(15px)
+	&::-webkit-scrollbar-thumb
+		background: #a7a7ab
+		@include round(15px)	
+
+img
+	display: block
+	max-width: 100%
+	a
+		border: none
+		background-color: red
+
+ul
+	list-style: none
+
+a
+	cursor: pointer
+	display: inline
+	text-align: center
+	text-decoration: none
+
+input
+	outline: none
+
+.container
+	margin: 0 auto
+	width: $container
+	transition: $transition	
+
+.transition	
+	transition-duration: $transition
+	-moz-transition-duration: $transition
+	-webkit-transition-duration: $transition	

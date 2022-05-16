@@ -1,0 +1,51 @@
+@use '../abstracts/variables'as *
+@use '../abstracts/mixins'as * 
+// @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
+
+.content-slide
+    width: 100%
+    height: 500px
+    .slides
+        width: 100%
+        height: 100%
+        display: flex
+        overflow: hidden
+        position: relative
+        .slides-btn
+            width: 100%
+            height: 70px
+            display: flex
+            top: calc(50% - 35px)
+            position: absolute
+            align-items: center
+            justify-content: space-between
+            ion-icon
+                color: $white    
+                cursor: pointer
+                font-size: 30pt
+                font-weight: 100
+        .slide
+            margin-left: 0
+            transition: margin-left 2s ease-in-out
+        .active
+            // transform:
+            // animation: slide 2s ease-in-out infinite linear            
+        .balls
+            left: 0px
+            right: 0px
+            bottom: 0px
+            width: 100%
+            height: 40px
+            display: flex
+            position: absolute
+            align-items: center
+            justify-content: center
+            div
+                width: 18px
+                height: 18px
+                margin: 0px 2px
+                @include round(50%)       
+                border: 2px solid $white
+            .ball
+                background-color: $white
+                transition: all 0.5s ease-out

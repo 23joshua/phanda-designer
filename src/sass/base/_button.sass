@@ -1,0 +1,160 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/fonts'
+@use '../abstracts/mixins' as *
+
+
+.btn
+	color: #fff
+	border: none
+	font-size: 1em
+	cursor: pointer
+	transition: 0.2s
+	padding: 10px 20px
+	font-weight: $weight_light
+	display: inline-block
+	text-transform: lowercase
+	font: $font_btn
+	text-shadow: 1px 1px rgba(0,0,0,0.3)
+	background-color: $default
+	&:hover
+		color: #fff
+		text-decoration: none
+		background-color: $default_hover
+
+.btn_out
+	@extend.btn
+	text-shadow: none
+	color: $default
+	background-color: transparent
+	border: 1px solid $default
+	&:hover
+		text-shadow: none
+		color: $default_hover
+		background-color: transparent
+		border: 1px solid $default_hover		
+
+.btn_small
+	@extend.btn
+	padding: 8px 14px
+	font-size: 0.875em
+
+.btn_big
+	@extend.btn
+	padding: 11px 22px
+	font-size: 1.275em				
+
+// ======= green button
+
+.btn_green
+	@extend.btn
+	background-color: $green
+	&:hover
+		background-color: $green_hover
+
+.btn_green_out
+	@extend.btn
+	text-shadow: none
+	color: $green
+	background-color: transparent
+	border: 1px solid $green
+	&:hover
+		text-shadow: none
+		color: $green_hover
+		background-color: transparent
+		border: 1px solid $green_hover		
+
+// ======= blue button
+
+.btn_blue
+	@extend.btn
+	background-color: $blue
+	&:hover
+		background-color: $blue_hover	
+
+.btn_blue_out
+	@extend.btn
+	text-shadow: none
+	color: $blue
+	background-color: transparent
+	border: 1px solid $blue
+	&:hover
+		text-shadow: none
+		color: $blue_hover
+		background-color: transparent
+		border: 1px solid $blue_hover			
+
+// ======= yellow button
+
+.btn_yellow
+	@extend.btn
+	background-color: $yellow
+	&:hover
+		background-color: $yellow_hover
+
+.btn_yellow_out
+	@extend.btn
+	text-shadow: none
+	color: $yellow
+	background-color: transparent
+	border: 1px solid $yellow
+	&:hover
+		text-shadow: none
+		color: $yellow_hover
+		background-color: transparent
+		border: 1px solid $yellow_hover
+
+// ======= exc button =====
+.btn-exc-primary
+	width: 170px
+	height: 45px
+	z-index: $index_medium
+	margin-top: 90px
+	text-align: center
+	line-height: 25px
+	position: relative
+	color: $exc_gray_dark
+	background-color: $white
+	text-transform: uppercase
+	font-weight: $weight_semi_bold
+	@include round_ex(0px, 5px, 0px, 5px)
+	&:before
+		top: 2px
+		right: 1px
+		content: ''
+		width: 70px
+		height: 92.5%
+		z-index: -1
+		position: absolute
+		background-color: $exc_blue		
+		@include round_ex(0px, 5px, 0px, 0px)
+		clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%)
+	&:after
+		top: 18px
+		content: ''
+		right: 15px
+		width: 10px
+		height: 10px
+		position: absolute
+		background-color: $white
+		@include round_ex(0px, 1px, 0px, 1px)
+
+
+// ======= red button
+
+.btn_red
+	@extend.btn
+	background-color: $red
+	&:hover
+		background-color: $red_hover
+
+.btn_red_out
+	@extend.btn
+	text-shadow: none
+	color: $red
+	background-color: transparent
+	border: 1px solid $red
+	&:hover
+		text-shadow: none
+		color: $red_hover
+		background-color: transparent
+		border: 1px solid $red_hover

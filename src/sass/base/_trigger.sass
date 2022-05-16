@@ -1,0 +1,84 @@
+@use '../abstracts/fonts'
+@use '../abstracts/mixins' as *
+@use '../abstracts/variables' as *
+
+// * ========= trigger default
+
+%trigger
+	color: #ffffffeb
+	padding: 12px
+	font: $font_btn
+	font-weight: $weight_bold
+	font-size: $font_small
+	text-transform: capitalize
+	border-left: 5px solid $default_hover
+
+.trigger
+	@extend %trigger
+	background-color: $default	
+
+.trigger_out
+	@extend %trigger
+	text-shadow: none
+	color: $default
+	background: transparent
+	border-color: $default
+	border-left: 0px
+	@include round($radius_large)
+
+// * ========= trigger sucess
+
+.trigger_success
+	@extend %trigger
+	background: $green
+	border-left: 5px solid $green_hover
+
+.trigger_success_out
+	@extend %trigger
+	text-shadow: none
+	color: $green
+	background: transparent
+	border-color: $green
+
+// * ========= trigger info	
+
+.trigger_info
+	@extend %trigger
+	background: $blue
+	border-left: 5px solid $blue_hover
+
+.trigger_info_out
+	@extend %trigger
+	text-shadow: none
+	color: $blue
+	background: transparent
+	border-color: $blue
+
+// * ========= trigger alert
+
+.trigger_alert
+	@extend %trigger
+	background: $yellow
+	border-left: 5px solid $yellow_hover
+
+.trigger_alert_out
+	@extend %trigger
+	text-shadow: none
+	background: transparent
+	color: $yellow
+	border-left: 5px solid $yellow
+
+// * ========= trigger error
+
+.trigger_error
+	@extend %trigger
+	background: $red
+	border-left: 5px solid $red_hover
+
+
+.trigger_error_out
+	@extend %trigger
+	text-shadow: none
+	color: $red
+	background: transparent
+	border-color: $red
