@@ -1,0 +1,154 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
+
+.banner
+    width: 20%
+    height: 100vh
+    z-index: $index-small
+    @include background_image('bg-header.jpg')
+    &::after
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        content: ''
+        width: 100%
+        height: 100vh
+        position: absolute
+        z-index: $index-xsmall
+        background: rgba(0, 0, 0, 0.6)
+    .content-banner
+        width: 100%
+        height: 100vh
+        display: flex
+        flex-wrap: nowrap
+        position: relative
+        align-items: flex-end
+        justify-content: space-between
+        @include breakpoint($screen_large)
+            flex-wrap: wrap
+        @include breakpoint($screen_xmedium)
+            align-items: center
+            justify-content: center    
+        .title-banner
+            width: 40%
+            height: 80%
+            margin-top: 0px 
+            @include breakpoint($screen_large)
+                width: 100%
+                height: 80%
+                text-align: center
+            @include breakpoint($screen_medium)
+                height: 90%   
+            @include breakpoint($screen_xmedium)
+                height: 50%
+                display: flex
+                align-items: center
+                flex-direction: column
+                justify-content: center    
+            h2
+                color: $white
+                font-size: 40pt
+                font-weight: $weight_light
+                @include breakpoint($screen_xmedium)
+                    font-size: 29pt
+                    padding-bottom: 10px	
+            h1
+                color: $white
+                font-size: 28pt
+                text-transform: capitalize
+                font-weight: $weight_extral_bold
+                @include breakpoint($screen_medium)
+                    font-size: 24pt
+                    padding: 0px 20px
+                @include breakpoint($screen_xmedium)
+                    font-size: 18pt		
+            p
+                color: $white
+                font-size: 12pt
+                padding-right: 100px
+                font-weight: $weight_light
+                @include breakpoint($screen_medium)
+                    font-size: 16pt	
+                    padding-right: 0px
+                    text-align: justify
+                @include breakpoint($screen_xmedium)
+                    padding: 0px 20px    
+            .btn_phanda
+                width: 200px
+                height: 50px
+                text-align: center
+                line-height: 30px
+                margin-top: 20px
+                @include round(50px)
+                background-color: $orange
+                @include breakpoint($screen_large)
+                    left: calc(100% - 100px)
+        .image-banner
+            right: 0
+            width: 60%			
+            bottom: 10px
+            display: grid
+            grid-gap: 10px
+            position: absolute
+            align-content: center
+            grid-template-rows: repeat(3, 160px)
+            grid-template-columns: repeat(3, 1fr)
+            @include breakpoint($screen_large)
+                width: 100%
+                bottom: 20%
+            @include breakpoint($screen_medium)
+                bottom: 5%    
+            @include breakpoint($screen_xmedium)
+                display: none    
+            figure
+                width: 100%
+                height: 100%
+                overflow: hidden
+                position: relative
+                z-index: $index_small
+                transition: 1s
+                // transform: translateX(-100%)
+                &:hover
+                    transition: 1s
+                    &:after
+                        top: 0
+                        left: 0
+                        right: 0
+                        content: ''
+                        width: 100%
+                        height: 100%
+                        transition: 1s
+                        position: absolute
+                        background: $orange
+                        z-index: $index_medium
+                        transform: translateX(0)
+                img
+                    width: 100%
+                    height: 100%
+                    z-index: $index_small
+                    @include breakpoint($screen_large)
+                        width: 100%
+                        height: 100%        
+            .figure-01
+                grid-column: 3 / 4
+                grid-row: 3 / 4
+            .figure-02
+                grid-column: 3 / 4
+                grid-row: 2 / 3
+            .figure-03
+                grid-column: 2 / 3
+                grid-row: 2 / 3
+            .figure-04
+                grid-column: 2 / 3
+                grid-row: 3 / 4
+            .figure-05
+                grid-column: 1 / 1
+                grid-row: 3 / 4
+            .figure-06
+                grid-column: 3 / 4
+                grid-row: 1 / 2	
+                @include breakpoint($screen_large)
+                    grid-column: 1 / 2
+                    grid-row: 2 / 3	   	

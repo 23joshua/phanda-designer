@@ -2,3 +2,95 @@
 @use '../abstracts/mixins'as * 
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
 
+.blog
+    width: 20%
+    height: 100vh
+    // overflow-y: scroll
+    z-index: $index-small
+    @include background_image('bg-header.jpg')
+    &::after
+        top: 0
+        left: 400%
+        right: 0
+        bottom: 0
+        content: ''
+        width: 100%
+        height: 100vh
+        position: absolute
+        z-index: $index-xsmall
+        background: rgba(0, 0, 0, 0.6)
+    .content-blog 
+        width: 100%
+        display: grid
+        height: 100vh
+        padding: 90px 0px 10px 0px
+        grid-gap: 15px
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(5, 15vh)
+        header
+            color: $white
+            grid-row: 1 / 3
+            text-align: left
+            position: relative
+            grid-column: 1 / 3
+            text-transform: capitalize 
+            h1
+                top: calc(50% - 1pt)
+                font-size: 30pt
+                position: absolute
+                font-weight: $weight_extral_bold
+            p
+                bottom: 5px
+                font-size: 11pt
+                position: absolute   
+                padding-right: 130px 
+                font-weight: $weight_light
+        article 
+            width: 100%
+            height: 100%
+            padding: 10px
+            display: flex
+            align-items: center
+            @include round(20px)
+            justify-content: center   
+            header
+                width: 100%
+                height: 50%
+                text-align: center 
+                h1 
+                    top: 0
+                    margin-top: -20px
+                    position: static
+                    a 
+                        color: $white
+                        font-size: 15pt
+                        text-align: center
+                        text-transform: capitalize
+                p
+                    padding: 0px
+                    position: static
+                    text-align: center 
+                    font-size: 7pt
+                    font-weight: $weight_light
+                    span
+                        font-size: 9pt
+        .box-1
+            grid-column: 1 / 2
+            grid-row: 3 / 4
+            background: yellow 
+        .box-2
+            grid-column: 1 / 2
+            grid-row: 4 / 6
+            background: brown  
+        .box-3
+            grid-column: 2 / 3
+            grid-row: 3 / 6
+            background: lightblue 
+        .box-4
+            grid-column: 3 / 4
+            grid-row: 2 / 5
+            background: lightblue 
+        .box-5
+            grid-column: 4 / 5
+            grid-row: 1 / 4
+            background: lightblue                       

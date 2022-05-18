@@ -4,34 +4,21 @@
 
 .header
 	width: 100%
-	height: 100vh
-	position: relative
-	z-index: $index-small
-	@include background_image('bg-header.jpg')
-	&::after
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		content: ''
-		width: 100%
-		height: 100vh
-		position: absolute
-		z-index: $index-xsmall
-		background: rgba(0, 0, 0, 0.6)
+	height: 70px
+	position: fixed
+	z-index: $index_large
 	.content-header
 		padding-top: 10px
 		width: 100%
-		height:100vh
+		height:100%
 		display: flex
-		flex-wrap: wrap
-		position: relative
+		flex-wrap: nowrap
 		flex-direction: row
 		justify-content: space-between
 		@include breakpoint($screen_large)
 			position: relative
 		.logo
-			width: 40%
+			width: 25%
 			height: 50px
 			line-height: 50px
 			text-transform: uppercase	
@@ -42,163 +29,62 @@
 		.btn-menu
 			width: 50px
 			height: 50px
-			display: flex
+			display: none
 			cursor: pointer
+			border: 1px solid $orange
 			align-items: center
 			justify-content: center
 			@include breakpoint($screen_large)
-				// display: flex
-			ion-icon
-				font-size: 35px
-				color: $white
+				display: block
+				ion-icon
+					font-size: 35px
+					color: $white
 		.nav
-			top: 60px
-			right: 0
-			width: 300px
+			width: 70%
 			display: flex
-			// padding: 10px 0px
-			text-align: left
-			line-height: 50px
-			position: absolute
-			background: $white
-			flex-direction: column
+			align-items: center
+			flex-direction: row
 			text-transform: uppercase
-			justify-content: flex-start
+			justify-content: flex-end
 			@include breakpoint($screen_large)
 				right: 0
 				top: 70px
 				width: 100%
 				display: none
 				height: 350px
-				z-index: $index_large
 				position: absolute
+				z-index: $index_large
 				flex-direction: column
-				justify-content: flex-start
 				background-color: $white
+				justify-content: flex-start
 			a
-				font-size: 10pt
-				padding: 10px 15px
-				position: relative
+				color: $white
+				cursor: pointer
+				font-size: 11pt
 				text-align: left
-				color: $exc_gray_dark
+				padding: 10px 15px
+				transition: all 1s color
+				&:hover
+					color: $orange
+					transition: all 1s color
 				@include breakpoint($screen_large)
 					text-align: left
 					line-height: 40px
-				&:hover
-					opacity: 1
-					color: $exc_blue
-					transition: opacity 2s 1s 
-					&::after
-						top: 0
-						left: 0
-						right: 0
-						bottom: 0
-						content: ''
-						display: block
-						position: absolute
-						background-color: $exc_blue
-						animation: text-reveal 1s ease forwards
-			.active-menu
-				color: $white
-				background: $exc_blue
-				transition: background 1s 
-				&:hover
-					opacity: 1
-					color: $exc_blue
-					background-color: $exc_gray_dark
-					transition: background 1s 
-			@keyframes text-reveal
-				0% 
-					width: 0%
-					opacity: 0.1
-					transform: translateX(0%)
-				25%
-					width: 100%
-					opacity: 0.25
-				50%
-					opacity: 0.5
-				75%
-					widows: 100%
-					opacity: 0.75			
-				100%
-					width: 0%
-					opacity: 1
-					transform: translateX(0%)	
-			.btn-exc
-				float: right
-				color: $white	
-				margin-top: 16px
-				margin-right: 10px
-				text-transform: uppercase
-	.header-text
-		width: 100%
-		height: 450px
-		margin-top: 93px 
-		h2
-			color: $white
-			font-size: 28pt
-			font-weight: $weight_light
-			@include breakpoint($screen_medium)
-				font-size: 20pt
-			@include breakpoint($screen_xmedium)
-				font-size: 16pt	
-		h1
-			font-size: 30pt
-			color: $white
-			position: relative
-			font-weight: $weight_bold
-			@include breakpoint($screen_medium)
-				font-size: 24pt
-			@include breakpoint($screen_xmedium)
-				font-size: 18pt	
-			&::before
-				top: 73px
-				left: 0
-				content: ''
-				width: 50px
-				height: 5px
-				position: absolute
-				background-color: $white
-				@include breakpoint($screen_large)
-					top: 50px	
-				@include breakpoint($screen_xmedium)
-					top: 40px	
-			&::after
-				top: 73px
-				left: 65px
-				content: ''
-				width: 50px
-				height: 5px
-				position: absolute
-				background-color: $exc_blue	
-				@include breakpoint($screen_large)
-					top: 50px
-				@include breakpoint($screen_xmedium)
-					top: 40px	
-		p
-			font-size: 18pt
-			color: $white
-			margin-top: 50px
-			font-weight: $weight_semi_bold
-			@include breakpoint($screen_medium)
-				font-size: 16pt	
-		.header-button
-			right: 0
-			width: 70px
+			.a-active
+				position: relative
+				&::after
+					top: 80%
+					left: calc( 50% - 30% )
+					content: ''
+					width: 60%
+					height: 2px
+					position: absolute
+					background-color: $orange		
+		.active-menu
 			display: flex
-			position: absolute
-			align-items: center	
-			top: calc(50% - 120px)
-			justify-content: center
-			flex-direction: column
-			span
-				width: 50px
-				height: 50px
-				display: flex
-				margin: 5px 0px
-				align-items: center
-				justify-content: center
-				background-color: $exc_gray_dark
-				ion-icon
-					color: $white
-					font-size: 22px
+.main
+	width: 500%
+	display: flex
+	overflow: hidden
+	flex-wrap: nowrap
+	justify-content: flex-start							
