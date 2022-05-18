@@ -21,7 +21,7 @@ function optimizeimg() {
   return src('src/img/**/*.{jpg,png,svg,gif}') // change to your source directory
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.mozjpeg({ quality: 80, progressive: true }),
       imagemin.optipng({ optimizationLevel: 5 }),
     ]))
     .pipe(dest('assets/img/')) // change to your final/public directory
@@ -35,11 +35,11 @@ function webpImage() {
 }
 
 //optimize and move images
-function webpImage() {
-  return src('assets/img/*.{jpg,png,svg,gif}') // change to your source directory
-    .pipe(imagewebp())
-    .pipe(dest('assets/img/')) // change to your final/public directory
-};
+// function webpImage() {
+//   return src('assets/img/*.{jpg,png,svg,gif}') // change to your source directory
+//     .pipe(imagewebp())
+//     .pipe(dest('assets/img/')) // change to your final/public directory
+// };
 
 // minify js
 function jsmin(){

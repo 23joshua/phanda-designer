@@ -29,10 +29,14 @@
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mozjpeg": "^8.0.0",
+    "optipng-bin": "^9.0.0",
+    "pngquant-bin": "^8.0.1",
     "sass": "^1.51.0"
   },
   "dependencies": {
-    "gulp": "^4.0.2",
-    "init": "^0.1.2"
+    "gulp": "^4.0.2"
   }
 }
