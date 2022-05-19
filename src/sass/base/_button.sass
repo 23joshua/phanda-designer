@@ -103,42 +103,6 @@
 		background-color: transparent
 		border: 1px solid $yellow_hover
 
-// ======= exc button =====
-.btn-exc-primary
-	width: 170px
-	height: 45px
-	z-index: $index_medium
-	margin-top: 90px
-	text-align: center
-	line-height: 25px
-	position: relative
-	color: $exc_gray_dark
-	background-color: $white
-	text-transform: uppercase
-	font-weight: $weight_semi_bold
-	@include round_ex(0px, 5px, 0px, 5px)
-	&:before
-		top: 2px
-		right: 1px
-		content: ''
-		width: 70px
-		height: 92.5%
-		z-index: -1
-		position: absolute
-		background-color: $exc_blue		
-		@include round_ex(0px, 5px, 0px, 0px)
-		clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%)
-	&:after
-		top: 18px
-		content: ''
-		right: 15px
-		width: 10px
-		height: 10px
-		position: absolute
-		background-color: $white
-		@include round_ex(0px, 1px, 0px, 1px)
-
-
 // ======= red button
 
 .btn_red
@@ -158,3 +122,58 @@
 		color: $red_hover
 		background-color: transparent
 		border: 1px solid $red_hover
+
+.btn_phanda
+	color: $white
+	font-size: 1.5em
+	padding: 10px 30px
+	position: relative
+	text-align: center
+	letter-spacing: 0.2em 
+	background-color: $white
+	text-transform: uppercase 
+	transition: letter-spacing 0.5s ease, color 0.5s ease
+	&:hover
+		color: $orange
+		letter-spacing: 0.25em		
+		background-color: $orange
+		box-shadow: 0px 0px 30px $orange
+		i
+			&:before
+				left: 20%
+				width: 20px
+			&:after
+				left: 75%
+				width: 20px		
+	&::before
+		inset: 2px
+		content: ''
+		position: absolute
+		background-color: #000	
+	span
+		position: relative
+		z-index: $index_small
+	i
+		inset: 0px
+		display: block
+		position: absolute	
+		&::before
+			top: 0
+			left: 75%
+			content: ''
+			width: 10px
+			height: 4px
+			position: absolute
+			background-color: #000
+			transform: translateX(-50%) skewX(325deg)
+			transition: transform 0.5s ease, left 0.5s ease
+		&::after
+			bottom: 0
+			left: 25%
+			content: ''
+			width: 10px
+			height: 4px
+			position: absolute
+			background-color: #000
+			transform: translateX(-50%) skewX(325deg)
+			transition: transform 0.5s, left 0.5s ease

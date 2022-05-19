@@ -42,7 +42,7 @@
             @include breakpoint($screen_medium)
                 height: 90%   
             @include breakpoint($screen_xmedium)
-                height: 50%
+                height: 70%
                 display: flex
                 align-items: center
                 flex-direction: column
@@ -69,22 +69,16 @@
                 font-size: 12pt
                 padding-right: 100px
                 font-weight: $weight_light
+                @include breakpoint($screen_large)
+                    padding-right: 0px
                 @include breakpoint($screen_medium)
                     font-size: 16pt	
-                    padding-right: 0px
                     text-align: justify
                 @include breakpoint($screen_xmedium)
                     padding: 0px 20px    
             .btn_phanda
-                width: 200px
-                height: 50px
-                text-align: center
-                line-height: 30px
-                margin-top: 20px
-                @include round(50px)
-                background-color: $orange
-                @include breakpoint($screen_large)
-                    left: calc(100% - 100px)
+                top: 20px
+                left: 15px
         .image-banner
             right: 0
             width: 60%			

@@ -3,84 +3,112 @@
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
 
 .header
+	top: 0
+	left: 0
 	width: 100%
 	height: 70px
 	position: fixed
 	z-index: $index_large
-	.content-header
-		padding-top: 10px
-		width: 100%
-		height:100%
-		display: flex
-		flex-wrap: nowrap
-		flex-direction: row
-		justify-content: space-between
+	@include breakpoint($screen_large)
+		position: static
+	.container
+		// background-color: $white
 		@include breakpoint($screen_large)
-			position: relative
-		.logo
-			width: 25%
-			height: 50px
-			line-height: 50px
-			text-transform: uppercase	
-			a
-				font-size: 20pt
-				color: $orange
-				font-weight: $weight_extral_bold
-		.btn-menu
-			width: 50px
-			height: 50px
-			display: none
-			cursor: pointer
-			align-items: center
-			justify-content: center
-			@include breakpoint($screen_large)
-				display: block
-				ion-icon
-					font-size: 35px
-					color: $white
-		.nav
-			width: 70%
+			// position: fixed
+			// top: 0px
+			// left: calc(100% - 99%)
+		.content-header
+			padding-top: 10px
+			width: 100%
+			height:100%
 			display: flex
-			align-items: center
+			flex-wrap: nowrap
 			flex-direction: row
-			text-transform: uppercase
-			justify-content: flex-end
+			justify-content: space-between
 			@include breakpoint($screen_large)
-				right: 0
-				top: 70px
 				width: 100%
-				display: none
-				height: 350px
-				position: absolute
-				z-index: $index_large
-				flex-direction: column
-				background-color: $white
-				justify-content: flex-start
-			a
-				color: $white
-				cursor: pointer
-				font-size: 11pt
-				text-align: left
-				padding: 10px 15px
-				transition: all 1s color
-				&:hover
-					color: $orange
-					transition: all 1s color
-				@include breakpoint($screen_large)
-					text-align: left
-					line-height: 40px
-			.a-active
 				position: relative
-				&::after
-					top: 80%
-					left: calc( 50% - 30% )
-					content: ''
-					width: 60%
-					height: 2px
+			.logo
+				width: 25%
+				height: 50px
+				line-height: 50px
+				text-transform: uppercase	
+				a
+					font-size: 20pt
+					color: $orange
+					font-weight: $weight_extral_bold
+			.btn-bars
+				width: 50px
+				height: 50px
+				display: none
+				cursor: pointer
+				background-color: red
+				align-items: center
+				justify-content: center
+				@include breakpoint($screen_large)
+					display: block
+					img 
+						background-color: $white
+			.nav
+				gap: 10px
+				width: 70%
+				display: flex
+				align-items: center
+				flex-direction: row
+				justify-content: flex-end
+				@include breakpoint($screen_large)
+					right: 0
+					top: -420px
+					width: 100%
+					display: block
+					height: 350px
 					position: absolute
-					background-color: $orange		
-		.active-menu
-			display: flex
+					z-index: $index_xsmall
+					flex-direction: column
+					background-color: $white
+					justify-content: flex-start
+					transition: top 0.5s ease-in, z-index 1s 0.7s ease-in
+				a
+					cursor: pointer
+					font-size: 11pt
+					text-align: left
+					color: transparent
+					position: relative
+					text-transform: uppercase
+					transition: color 1s ease
+					-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)
+					&:before
+						width: 0%
+						color: $orange
+						overflow: hidden
+						position: absolute
+						transition: width 1s
+						content: attr(data-text)
+						// border-right: 2px solid transparent
+						-webkit-text-stroke: 1px $orange
+					&:hover
+						&::before
+							width: 100%
+							border-right: 2px solid $orange
+							filter: drop-shadow(0 0 25px $orange)
+					@include breakpoint($screen_large)
+						text-align: left
+						line-height: 40px
+				// .a-active
+				// 	position: relative
+				// 	&::after
+				// 		top: 80%
+				// 		left: calc( 50% - 30% )
+				// 		content: ''
+				// 		width: 60%
+				// 		height: 2px
+				// 		position: absolute
+				// 		background-color: $orange		
+			.active
+				top: 70px
+				z-index: $index_small
+				background-color: $orange !important
+				transition: top 0.5s ease-in, z-index 1s 0.7s ease-in
 .main
 	width: 500%
 	display: flex
