@@ -34,6 +34,39 @@
                 z-index: $index_medium
                 grid-area: 1 / 1 / 3 / 2
                 nav
+                    gap: 5px
+                    width: 100%
+                    height: 100%
                     display: flex
-                    flex-direction: column                            
+                    justify-content: center
+                    flex-direction: column 
+                    .a_color_1
+                        text-transform: capitalize    
+                        &::before
+                            border-right: 4px solid $blue_light 
+                    .a_color_2
+                        &::before
+                            color: #FFBE0B
+                            -webkit-text-stroke: 1px #FFBE0B
+                            border-right: 4px solid #FFBE0B 
+                    .a_color_3
+                        &::before
+                            color: #FF006E
+                            -webkit-text-stroke: 1px #FF006E
+                            border-right: 4px solid #FF006E 
+                    .a_color_4
+                        &::before
+                            color: #FFBE0B
+                            -webkit-text-stroke: 1px #FFBE0B
+                            border-right: 4px solid #FFBE0B 
+                    .a_color_5
+                        &::before
+                            color: #8338EC
+                            -webkit-text-stroke: 1px #8338EC
+                            border-right: 4px solid #8338EC 
+                    .a_color_6
+                        &::before
+                            color: #00ffe7
+                            -webkit-text-stroke: 1px #00ffe7
+                            border-right: 4px solid #00ffe7                                                                       
                     
