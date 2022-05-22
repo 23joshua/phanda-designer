@@ -50,7 +50,7 @@
 					img 
 						background-color: $white
 			.nav
-				gap: 10px
+				gap: 15px
 				width: 70%
 				display: flex
 				align-items: center
@@ -69,27 +69,7 @@
 					justify-content: flex-start
 					transition: top 0.5s ease-in, z-index 1s 0.7s ease-in
 				a
-					cursor: pointer
-					font-size: 14pt
-					text-align: left
-					color: transparent
-					position: relative
-					text-transform: uppercase
-					transition: color 1s ease
-					-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)
-					&:before
-						width: 0%
-						color: $blue_light
-						overflow: hidden
-						position: absolute
-						transition: width 1s
-						content: attr(data-text)
-						-webkit-text-stroke: 1px $blue_light
-					&:hover
-						&::before
-							width: 100%
-							border-right: 2px solid $blue_light
-							filter: drop-shadow(0 0 25px $blue_light)
+					
 					@include breakpoint($screen_large)
 						text-align: left
 						line-height: 40px
