@@ -1,1 +1,1 @@
-let bars=document.querySelector(".btn-bars"),nav=document.querySelector("nav");function menuRemoveClass(){nav.classList.toggle("active")}bars.addEventListener("click",(()=>{}));
+let bars=document.querySelector(".btn-bars"),nav=document.querySelector("nav"),link=document.querySelector(".a_link");function menuRemoveClass(){nav.classList.toggle("active")}bars.addEventListener("click",(()=>{link.classList.add("link_active")}));
