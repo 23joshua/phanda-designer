@@ -25,7 +25,6 @@
         display: flex
         flex-wrap: wrap
         margin-top: 100px
-        position: relative
         justify-content: center
         .card
             width: 45%
@@ -36,16 +35,16 @@
             z-index: $index_small
             &:hover
                 figure
+                    left: -75px
                     width: 150px
                     height: 150px
-                    left: -75px
-                    z-index: $index_medium
-                    top: calc(50% - 75px)
                     background: $orange
+                    top: calc(50% - 75px)
+                    z-index: $index_large
                     transition: left 0.5s ease-in-out, background 1s ease-in-out
                 img
-                    max-width: 75px
                     height: 75px    
+                    max-width: 75px
             figure
                 top: 0
                 left: 0
@@ -70,6 +69,7 @@
                     content: attr(data-text)
                     text-transform: uppercase
                     font-weight: $weight_bold
+                    color: rgba(255, 255, 255, .05)
                 img
                     max-width: 200px
                     height: 200px
