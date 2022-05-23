@@ -27,10 +27,11 @@
         margin-top: 100px
         justify-content: center
         .card
-            width: 45%
+            width: 40%
             height: 250px
             display: flex
             background: $white
+            overflow: initial
             position: relative
             z-index: $index_small
             &:hover
@@ -38,10 +39,15 @@
                     left: -75px
                     width: 150px
                     height: 150px
+                    position: relative
                     background: $orange
                     top: calc(50% - 75px)
                     z-index: $index_large
-                    transition: left 0.5s ease-in-out, background 1s ease-in-out
+                    transition: 0.5s ease-in-out, background 1s ease-in-out
+                    &::before
+                        bottom: -20px
+                        font-size: 1.2rem
+                        color: rgba(255, 255, 255, .5)
                 img
                     height: 75px    
                     max-width: 75px
@@ -55,7 +61,7 @@
                 position: absolute
                 background: #333
                 align-items: center
-                z-index: $index_small
+                z-index: $index_medium
                 justify-content: center
                 transition: left 0.5s ease-in-out, background 1s ease-in-out
                 &::before
@@ -71,8 +77,8 @@
                     font-weight: $weight_bold
                     color: rgba(255, 255, 255, .05)
                 img
-                    max-width: 200px
                     height: 200px
+                    max-width: 200px
                     transition: 0.5s ease-in-out    
             .content
                 position: absolute
