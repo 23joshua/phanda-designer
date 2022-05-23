@@ -25,96 +25,68 @@
         height: 100vh
         padding: 90px 0px 10px 0px
         grid-gap: 15px
-        grid-template-columns: repeat(4, 1fr)
-        grid-template-rows: repeat(5, 15vh)
-        header
-            color: $white
-            grid-row: 1 / 3
-            text-align: left
-            position: relative
-            grid-column: 1 / 3
-            text-transform: capitalize 
-            h1
-                top: calc(50% - 1pt)
-                font-size: 30pt
-                position: absolute
-                font-weight: $weight_extral_bold
-            p
-                bottom: 5px
-                font-size: 11pt
-                position: absolute   
-                padding-right: 130px 
-                font-weight: $weight_light
+        grid-template-columns: 50% repeat(4, 1fr)
+        grid-template-rows: repeat(6, 12vh)
         article 
             width: 100%
             height: 100%
             display: flex
+            padding: 10px
             cursor: pointer
+            background: $white
             position: relative
             align-items: center
             box-shadow: $shadow  
-            @include round(20px)
-            justify-content: center
-            transition: all 1s 2s background 
-            &::after
-                top: 0
-                right: 0
-                left: 0
-                content: ''
-                width: 100%
+            justify-content: space-between
+            figure
+                // top: -20px
                 height: 100%
-                z-index: $index_small
-                transition: all 1s 2s background
-                background: rgba(0, 0, 0, 0.2)
-            &:hover
-                transition: all 1s 2s background
-                &::after
-                    transition: all 1s 2s background
-                    background: rgba(0, 0, 0, 0.6)        
-            header
-                width: 100%
-                height: 50%
-                display: flex
-                position: absolute
-                text-align: center 
-                align-items: center
-                flex-direction: column
-                z-index: $index_medium
-                justify-content: center
-                h1 
-                    top: 0
-                    margin-top: -20px
-                    position: static
-                    a 
-                        color: $white
-                        font-size: 15pt
-                        text-align: center
-                        text-transform: capitalize
-                p
-                    padding: 0px
-                    position: static
-                    text-align: center 
-                    font-size: 7pt
-                    font-weight: $weight_light
-                    span
+                position: relative     
+                @include box(7, transparent, 0, 5px)
+                padding: 0px
+                margin-left: 0px
+                div
+                    width: 100%
+                    height: 180px
+                    box-shadow: 1px 5px 1px rgb(255, 255, 255) 
+            .content
+                
+                @include box(5, transparent, 0, 5px)
+                padding: 0px
+                header
+                    h1
+                        font-size: 16pt
                         color: $orange
-                        font-size: 9pt
-                        strong
-                            font-size: 8pt
-                            color: $white
+                        margin-top: 0px
+                        font-weight: $weight_extral_bold
+                    figure
+                        width: 40%
+                        height: 30px
+                        padding: 5px
+                        display: flex
+                        margin: 10px 0px
+                        align-items: center
+                        @include round(20px)
+                        background-color: #999
+                        justify-content: flex-start
+                        img
+                            @include round_content(20px, true)
+                        figcaption
+                            margin-left: 5px 
+                            p
+                                font-size: 9pt
+                                color: $white
+                                text-transform: capitalize   
+                div
+                    p
+                        font-size: 10.5pt
+                        font-weight: $weight_regular
         .box-1
-            grid-column: 1 / 2
-            grid-row: 3 / 4
-            background: yellow 
+            grid-area: 1 / 1 / 4 / 2
         .box-2
-            grid-column: 1 / 2
-            grid-row: 4 / 6
-            background: brown  
+            grid-area: 1 / 2 / 4 / 6
         .box-3
-            grid-column: 2 / 3
-            grid-row: 3 / 6
-            background: lightblue
-            @include background_image('blog-01.webp')  
+            grid-area: 4 / 1 / 7 / 2
         .box-4
             grid-column: 3 / 4
             grid-row: 2 / 5
