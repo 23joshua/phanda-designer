@@ -18,3 +18,80 @@
         position: absolute
         z-index: $index-xsmall
         background: rgba(0, 0, 0, 0.6)
+    .content-servic
+        gap: 20px
+        width: 100%
+        height: 78vh
+        display: flex
+        flex-wrap: wrap
+        margin-top: 100px
+        position: relative
+        justify-content: center
+        .card
+            width: 45%
+            height: 250px
+            display: flex
+            background: $white
+            position: relative
+            z-index: $index_small
+            &:hover
+                figure
+                    width: 150px
+                    height: 150px
+                    left: -75px
+                    z-index: $index_medium
+                    top: calc(50% - 75px)
+                    background: $orange
+                    transition: left 0.5s ease-in-out, background 1s ease-in-out
+                img
+                    max-width: 75px
+                    height: 75px    
+            figure
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                display: flex
+                overflow: hidden
+                position: absolute
+                background: #333
+                align-items: center
+                z-index: $index_small
+                justify-content: center
+                transition: left 0.5s ease-in-out, background 1s ease-in-out
+                &::before
+                    left: 0
+                    bottom: 0
+                    width: 100%
+                    height: 100%
+                    font-size: 5em
+                    color: rgba(255, 255, 255, .05)
+                    position: absolute
+                    text-align: center
+                    content: attr(data-text)
+                    text-transform: uppercase
+                    font-weight: $weight_bold
+                img
+                    max-width: 200px
+                    height: 200px
+                    transition: 0.5s ease-in-out    
+            .content
+                position: absolute
+                right: 0 
+                height: 100%
+                padding: 20px
+                display: flex
+                width: calc(100% - 75px)
+                h3
+                    font-size: 16pt
+                    color: $orange
+                    margin-bottom: 5px
+                    text-transform: capitalize
+                    font-weight: $weight_extral_bold
+                p
+                    color: #999 
+                    font-weight: $weight_regular    
+                .btn_phanda
+                    top: 15px
+                    span
+                        z-index: $index_small       
