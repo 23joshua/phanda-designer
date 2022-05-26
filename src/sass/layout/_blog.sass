@@ -23,24 +23,25 @@
         width: 100%
         display: grid
         height: 100vh
-        padding: 120px 0px 10px 0px
+        padding: 80px 0px 10px 0px
         grid-gap: 13px
-        grid-template-columns: 50% repeat(4, 1fr)
-        grid-template-rows: repeat(6, 12vh)
+        grid-template-columns: repeat(10, 1fr)
+        grid-template-rows: repeat(6, 12.6vh)
         article 
             width: 100%
             height: 100%
             display: flex
             padding: 10px
             cursor: pointer
-            background: $white
             position: relative
             overflow: initial
-            // align-items: center
-            justify-content: space-between
+            @include round(5px)
             transition: 0.5s ease-in-out
-            box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, .7) 
+            justify-content: space-between
+            background: rgba(255, 255, 255, .7)
+            box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, .8) 
             &:hover
+                background-color: $white
                 figure
                     div
                         top: -40px
@@ -126,7 +127,7 @@
                         margin-top: 0px
                         font-weight: $weight_extral_bold
                     figure
-                        width: 40%
+                        width: 80%
                         height: 30px
                         padding: 5px
                         display: flex
@@ -151,6 +152,123 @@
                         padding-right: 5px
                         font-weight: $weight_regular
         .box-1
-            grid-area: 1 / 1 / 4 / 2
+            grid-area: 1 / 1 / 4 / 5
         .box-2
-            grid-area: 1 / 2 / 4 / 6                      
+            grid-area: 1 / 5 / 4 / 9  
+        .box-3
+            padding: 0px
+            grid-area: 1 / 9 / 5 / 11
+            .container-profile
+                width: 100%
+                height: 100%
+                display: flex
+                align-items: center
+                flex-direction: column 
+                justify-content: space-between
+                &:hover
+                    header,
+                    .content-profile
+                        background: $orange
+                        transition: background 0.5s ease-in-out
+                        figure
+                            background: $white
+                            transition: background 0.5s ease-in-out
+                    footer
+                        background: $blue_dark
+                        transition: background 0.5s ease-in-out
+                        span
+                            color: $white
+                header
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    flex-direction: column
+                    justify-content: center    
+                    // background: $blue_dark             
+                    padding: 20px 0px 0px 0px
+                    text-transform: capitalize
+                    transition: background 0.5s ease-in-out
+                    @include round_ex(5px, 5px, 0, 0)
+                    figure
+                        display: flex
+                        align-items: center
+                        background: #d7a15a
+                        justify-content: center
+                        @include round_content(110px, true)
+                        transition: background 0.5s ease-in
+                        img
+                            @include round_content(100px, true)
+                    .name
+                        color: $white
+                        font-size: 12pt
+                        padding-top: 10px
+                    .about-blog
+                        color: $orange
+                        font-size: 10pt        
+                .content-profile
+                    gap: 10px
+                    width: 100%
+                    height: 120px
+                    display: flex
+                    align-items: center
+                    flex-direction: column
+                    // background: $blue_dark  
+                    justify-content: flex-start
+                    transition: background 0.5s ease-in-out
+                    .link-social
+                        gap: 10px
+                        display: flex
+                        margin-top: 10px
+                        a
+                            display: flex
+                            color: $white
+                            align-items: center
+                            justify-content: center
+                            ion-icon
+                                font-size: 17pt
+                    .btn_phanda
+                        font-size: 0.7em  
+                        &:hover
+                            padding: 13px 25px        
+                footer
+                    width: 100%
+                    height: 80px
+                    display: flex
+                    // background: $white
+                    align-items: center
+                    justify-content: center
+                    @include round_ex(0, 0, 5px, 5px)
+                    transition: background 0.5s ease-in-out
+                    ul
+                        gap: 10px
+                        display: flex
+                        align-items: center
+                        justify-content: space-between 
+                        li
+                            width: 33.3%
+                            text-align: center
+                            text-transform: capitalize
+                            span
+                                color: $blue_dark
+                                font-size: 20pt
+                            p
+                                color: $orange
+                                font-size: 8pt               
+                                padding-top: -10px
+        .box-4
+            grid-area: 4 / 1 / 7 / 5 
+        .box-5
+            grid-area: 4 / 5 / 7 / 7
+        .box-6
+            padding: 0px
+            grid-area: 4 / 7 / 6 / 9
+            figure
+                width: 100%
+                height: 100%
+                @include round(5px)
+                img
+                    @include round(5px)
+        .box-7
+            grid-area: 6 / 7 / 7 / 9
+        .box-8
+            grid-area: 5 / 9 / 7 / 11                             
