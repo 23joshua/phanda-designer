@@ -27,6 +27,7 @@
         grid-gap: 13px
         grid-template-columns: repeat(10, 1fr)
         grid-template-rows: repeat(6, 12.6vh)
+        aside,
         article 
             width: 100%
             height: 100%
@@ -78,6 +79,7 @@
                         li
                             width: 50%
                         .date-blog
+                            width: 70%
                             display: flex
                             color: $blue_light
                             flex-direction: column
@@ -151,11 +153,13 @@
                         text-align: justify
                         padding-right: 5px
                         font-weight: $weight_regular
-        .box-1
+        .article-1
             grid-area: 1 / 1 / 4 / 5
-        .box-2
+        .article-2
             grid-area: 1 / 5 / 4 / 9  
-        .box-3
+        .article-3
+            grid-area: 4 / 1 / 7 / 5 
+        .aside-3
             padding: 0px
             grid-area: 1 / 9 / 5 / 11
             .container-profile
@@ -173,6 +177,8 @@
                         figure
                             background: $white
                             transition: background 0.5s ease-in-out
+                        .about-blog
+                            color: $blue_dark    
                     footer
                         background: $blue_dark
                         transition: background 0.5s ease-in-out
@@ -255,11 +261,9 @@
                                 color: $orange
                                 font-size: 8pt               
                                 padding-top: -10px
-        .box-4
-            grid-area: 4 / 1 / 7 / 5 
-        .box-5
+        .aside-5
             grid-area: 4 / 5 / 7 / 7
-        .box-6
+        .aside-6
             padding: 0px
             grid-area: 4 / 7 / 6 / 9
             figure
@@ -268,7 +272,50 @@
                 @include round(5px)
                 img
                     @include round(5px)
-        .box-7
+        .aside-7
+            text-align: center
+            position: relative
+            background: $blue_dark
             grid-area: 6 / 7 / 7 / 9
-        .box-8
-            grid-area: 5 / 9 / 7 / 11                             
+            &:hover
+                background: $blue_dark
+            .clock,
+            .calendar    
+                top: 0
+                left: 0
+                width: 100%
+                height: 50px
+                position: absolute
+                span
+                    font-size: 25pt
+                    color: $blue_light
+                    font-weight: $weight_bold
+                #s 
+                    font-size: 15pt  
+                .ponto
+                    animation: fadeIn 1s infinite
+                    @keyframes fadeIn
+                        0%
+                            opacity: 1
+                        50%
+                            opacity: 0.3    
+                        100%
+                            opacity: 1     
+            .calendar
+                gap: 6px
+                right: 0    
+                top: 32px
+                bottom: 0px
+                display: flex
+                align-items: center
+                justify-content: center
+                span 
+                    font-size: 10pt 	
+                    color: #faf
+                    font-weight: $weight_medium    
+                #w
+                    color: #00ffe7
+                    text-transform: uppercase
+                    font-weight: $weight_light
+        .aside-8
+            grid-area: 5 / 9 / 6 / 11                             
