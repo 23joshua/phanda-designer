@@ -5,82 +5,140 @@
 .header
 	top: 0
 	left: 0
-	width: 100%
-	height: 70px
-	position: fixed
-	z-index: $index_large
-	@include breakpoint($screen_large)
-		position: static
-	.container
-		// background-color: $white
-		@include breakpoint($screen_large)
-			// position: fixed
-			// top: 0px
-			// left: calc(100% - 99%)
-		.content-header
-			padding-top: 10px
-			width: 100%
-			height:100%
-			display: flex
-			flex-wrap: nowrap
-			flex-direction: row
-			justify-content: space-between
-			@include breakpoint($screen_large)
-				width: 100%
-				position: relative
-			.logo
-				width: 25%
-				height: 50px
-				line-height: 50px
-				text-transform: uppercase	
-				a
-					font-size: 20pt
-					color: $orange
-					font-weight: $weight_extral_bold
-			.btn-bars
-				width: 50px
-				height: 50px
-				display: none
-				cursor: pointer
-				background-color: red
-				align-items: center
-				justify-content: center
-				@include breakpoint($screen_large)
-					display: block
-					img 
-						background-color: $white
-			.nav
-				gap: 15px
-				width: 70%
-				display: flex
-				align-items: center
-				flex-direction: row
-				justify-content: flex-end
-				@include breakpoint($screen_large)
-					right: 0
-					top: -420px
-					width: 100%
-					display: block
-					height: 350px
-					position: absolute
-					z-index: $index_xsmall
-					flex-direction: column
-					background-color: $white
-					justify-content: flex-start
-					transition: top 0.5s ease-in, z-index 1s 0.7s ease-in
-				a
-					
-					@include breakpoint($screen_large)
-						text-align: left
-						line-height: 40px		
-			.active
-				top: 70px
-				z-index: $index_small
-				background-color: $orange !important
-				transition: top 0.5s ease-in, z-index 1s 0.7s ease-in
-.main
-	width: 600%
+	right: 0
+	height: 10vh
 	display: flex
-	overflow: hidden
-	flex-wrap: nowrap
-	justify-content: flex-start							
+	position: fixed
+	align-items: center
+	flex-direction: row
+	z-index: $index_large
+	justify-content: space-between
+	.logo
+		width: 25%
+		height: 50px
+		line-height: 50px
+		text-transform: uppercase
+		@include breakpoint($screen_large)
+			width: 40%
+		a
+			font-size: 20pt
+			color: $orange
+			font-weight: $weight_extral_bold
+	.toggle
+		gap: 1px
+		width: 35px
+		height: 35px
+		display: none
+		cursor: pointer
+		position: relative
+		align-items: center
+		background: transparent
+		justify-content: center
+		.toggle-box
+			z-index: -200
+			display: none
+			cursor: pointer
+			position: absolute
+			@include round(2px)
+			transition: all 0.5s ease
+			width: calc(50% - 1px)
+			height: calc(50% - 1px)
+			border: 1px solid yellow
+			@include breakpoint($screen_large)
+				display: block
+		.top-left
+			top: 0
+			left: 0
+		.top-right
+			top: 0
+			right: 0
+		.bottom-right
+			right: 0
+			bottom: 0
+		.bottom-left
+			left: 0
+			bottom: 0
+		.center
+			display: none
+			top: calc(50% - 18%)
+			left: calc(50% - 18%)
+			width: calc( 40% - 1px)
+			height: calc( 40% - 1px)
+			transition: all 0.5s ease
+		.active_toggle
+			display: block
+			@include round(2px)
+			width: calc(40% - 1px)
+			height: calc(40% - 1px)
+			transition: all 0.5s ease
+		@include breakpoint($screen_large)
+			display: block
+	.nav
+		gap: 15px
+		width: 70%
+		display: flex
+		align-items: center
+		flex-direction: row
+		justify-content: flex-end
+		@include breakpoint($screen_large)
+			top: 10vh
+			right: 0
+			padding: 10px
+			height: 400px
+			overflow: hidden
+			position: absolute
+			background: #333
+			z-index: $index_large
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			transition: height 1s ease-in-out
+		.a_link
+			padding: 5px 0px
+			@include breakpoint($screen_large)
+				color: red
+	.bounce_in_top
+		@include breakpoint($screen_large)
+			height: 400px
+			z-index: $index_large
+			transition: height 1s ease-in-out
+			animation: bounce_in_top 1.1s both
+			-webkit-animation: bounce-in-top 1.1s both
+	@keyframes bounce_in_top
+		0%
+			opacity: 0
+			z-index: -10
+			transform: translateY(500px)
+			animation-timing-function: ease-in
+		38%
+			opacity: 1
+			transform: translateY(0)
+			animation-timing-function: ease-out
+		55%
+			z-index: -10
+			transform: translateY(-65px)
+			animation-timing-function: ease-in
+		72%
+			transform: translateY(0)
+			animation-timing-function: ease-in
+		79%
+			z-index: -10
+			transform: translateY(-50px)
+			animation-timing-function: ease-in
+		82%
+			transform: translateY(0)
+			animation-timing-function: ease-out
+		90%
+			z-index: -10
+			transform: translateY(-28px)
+			animation-timing-function: ease-in
+		95%
+			transform: translateY(0)
+			animation-timing-function: ease-out
+		98%
+			z-index: -10
+			transform: translateY(-8px)
+			animation-timing-function: ease-in
+		100%
+			transform: translateY(0)
+			animation-timing-function: ease-out

@@ -2,3 +2,34 @@
 @use '../abstracts/mixins' as *
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
 
+.footer
+    left: 0
+    right: 0
+    bottom: 0
+    height: 7vh
+    display: flex
+    padding: 15px
+    position: fixed
+    align-items: center
+    z-index: $index_medium
+    justify-content: space-between
+    .rightFooter
+        font-size: .9em
+        color: $white
+        font-weight: $weight_light
+        span
+            font-style: italic
+    .social-footer
+        gap: 7px
+        width: 70px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        &:nth-last-child(3)
+            gap: 0px
+        a
+            font-size: 2em
+            color: $orange
+            display: flex
+            align-items: center
+            justify-content: center

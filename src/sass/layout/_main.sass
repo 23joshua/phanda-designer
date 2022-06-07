@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
+
+.main
+    width: 100%
+    height: 100vh
+    display: flex
+    position: relative
+    justify-content: flex-start
+    .main_content
+        top: 0
+        left: 0
+        right: -100%
+        bottom: 0
+        width: 100%
+        height: 100vh
+        position: absolute
+        z-index: $index_small
+        transition: all 0.5s ease-in
+        transform: translateX(101%)
+        &::after
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            content: ''
+            width: 100%
+            height: 100vh
+            position: absolute
+            z-index: $index-xsmall
+            background: rgba(0, 0, 0, 0.6)
+        .content
+            top: 10vh
+            height: 86vh
+            display: grid
+            align-content: center
+            position: relative
+            grid-template-rows: repeat(3, 1fr)
+            grid-template-columns: repeat(3, 1fr)
+    .main_active
+        z-index: $index_medium
+        transform: translateX(0)
+        transition: all 0.5s ease
+        animation: main_active 0.5s linear
+        @keyframes main_active
+            0%
+                opacity: 0.5
+                transform: translateX(25%)
+            50%
+                opacity: 1
+                transform: translateX(15%)
+            100%
+                transform: translateX(0)

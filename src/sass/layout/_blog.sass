@@ -3,32 +3,14 @@
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
 
 .blog
-    width: 20%
-    height: 100vh
-    // overflow-y: scroll
-    z-index: $index-small
     @include background_image('bg-blog.webp')
-    &::after
-        top: 0
-        left: 300%
-        right: 0
-        bottom: 0
-        content: ''
-        width: 100%
-        height: 100vh
-        position: absolute
-        z-index: $index-xsmall
-        background: rgba(0, 0, 0, 0.6)
-    .content-blog 
-        width: 100%
-        display: grid
-        height: 100vh
-        padding: 80px 0px 10px 0px
-        grid-gap: 13px
-        grid-template-columns: repeat(10, 1fr)
-        grid-template-rows: repeat(6, 12.6vh)
+    .content
+        gap: 10px
+        z-index: $index_medium
+        grid-template-columns: repeat(10, 1fr) !important
+        grid-template-rows: repeat(6, 12.1vh) !important
         aside,
-        article 
+        article
             width: 100%
             height: 100%
             display: flex
@@ -40,23 +22,23 @@
             transition: 0.5s ease-in-out
             justify-content: space-between
             background: rgba(255, 255, 255, .7)
-            box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, .8) 
+            box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, .8)
             &:hover
                 background-color: $white
                 figure
                     div
                         top: -40px
-                        transition: 0.5s ease-in-out 
+                        transition: 0.5s ease-in-out
                 .date-blog
-                    color: $orange 
-                    transition: 0.5s ease-in-out 
+                    color: $orange
+                    transition: 0.5s ease-in-out
                 .icon-link
                     a
                         color: #999
-                        transition: 0.5s ease-in-out            
+                        transition: 0.5s ease-in-out
             figure
-                height: 100%   
-                overflow: initial 
+                height: 100%
+                overflow: initial
                 @include box(7.5, transparent, 0, 0px)
                 padding: 0px
                 margin-left: 0px
@@ -69,32 +51,38 @@
                     transition: 0.5s ease-in-out
                     box-shadow: 8px 8px 50px 0px rgba(0, 0, 0, .7)
                 figcaption
-                    top: -44px
+                    top: -20px
+                    overflow: initial
                     position: relative
                     ul
                         width: 100%
+                        height: 100%
                         display: flex
+                        overflow: initial
+                        // position: absolute
                         align-items: center
                         justify-content: space-between
                         li
                             width: 50%
                         .date-blog
+                            top: -25px
                             width: 70%
                             display: flex
                             color: $blue_light
+                            position: absolute
                             flex-direction: column
                             align-items: flex-start
                             text-transform: capitalize
-                            transition: 0.5s ease-in-out 
+                            transition: 0.5s ease-in-out
                             h5
-                                top: -19pt
+                                top: -10pt
                                 left: 10px
                                 font-size: 60pt
                                 position: relative
-                                font-weight: $weight_bold    
+                                font-weight: $weight_bold
                             h6
                                 left: 10px
-                                top: -45px
+                                top: -35px
                                 font-size: 14pt
                                 position: relative
                                 font-weight: $weight_extral_bold
@@ -106,25 +94,25 @@
                                 height: 68px
                                 width: 100%
                                 display: flex
-                                position: relative 
+                                position: relative
                                 justify-content: flex-end
                                 li
                                     width: 25px
                                     a
+                                        color: $orange
                                         display: flex
+                                        font-size: 2em
                                         align-items: center
                                         justify-content: center
-                                        color: $orange 
-                                        transition: 0.5s ease-in-out 
-                                        ion-icon      
-                                            font-size: 19pt
-            .content
-                @include box(4.5, transparent, 0, 10px)
+                                        transition: 0.5s ease-in-out
+            .content-blog
                 padding: 0px
+                height: 100%
                 margin-right: 0px
+                @include box(4.5, transparent, 0, 5px)
                 header
                     h1
-                        font-size: 16pt
+                        font-size: 1.1em
                         color: $orange
                         margin-top: 0px
                         font-weight: $weight_extral_bold
@@ -142,23 +130,22 @@
                             @include round_content(20px, true)
                         figcaption
                             top: 0
-                            margin-left: 5px 
+                            margin-left: 5px
                             p
-                                font-size: 9pt
+                                font-size: 0.88em
                                 color: $white
-                                text-transform: capitalize   
+                                text-transform: capitalize
                 div
                     p
-                        font-size: 9pt
-                        text-align: justify
-                        padding-right: 5px
+                        font-size: 0.89em
+                        text-align: left
                         font-weight: $weight_regular
         .article-1
             grid-area: 1 / 1 / 4 / 5
         .article-2
-            grid-area: 1 / 5 / 4 / 9  
+            grid-area: 1 / 5 / 4 / 9
         .article-3
-            grid-area: 4 / 1 / 7 / 5 
+            grid-area: 4 / 1 / 7 / 5
         .aside-3
             padding: 0px
             grid-area: 1 / 9 / 5 / 11
@@ -167,7 +154,7 @@
                 height: 100%
                 display: flex
                 align-items: center
-                flex-direction: column 
+                flex-direction: column
                 justify-content: space-between
                 &:hover
                     header,
@@ -178,7 +165,7 @@
                             background: $white
                             transition: background 0.5s ease-in-out
                         .about-blog
-                            color: $blue_dark    
+                            color: $blue_dark
                     footer
                         background: $blue_dark
                         transition: background 0.5s ease-in-out
@@ -189,7 +176,7 @@
                     display: flex
                     align-items: center
                     flex-direction: column
-                    justify-content: center    
+                    justify-content: center
                     // background: $blue_dark             
                     padding: 20px 0px 0px 0px
                     text-transform: capitalize
@@ -210,7 +197,7 @@
                         padding-top: 10px
                     .about-blog
                         color: $orange
-                        font-size: 10pt        
+                        font-size: 10pt
                 .content-profile
                     gap: 10px
                     width: 100%
@@ -230,12 +217,10 @@
                             color: $white
                             align-items: center
                             justify-content: center
-                            ion-icon
-                                font-size: 17pt
                     .btn_phanda
-                        font-size: 0.7em  
+                        font-size: 0.7em
                         &:hover
-                            padding: 13px 25px        
+                            padding: 13px 25px
                 footer
                     width: 100%
                     height: 80px
@@ -249,7 +234,7 @@
                         gap: 10px
                         display: flex
                         align-items: center
-                        justify-content: space-between 
+                        justify-content: space-between
                         li
                             width: 33.3%
                             text-align: center
@@ -259,7 +244,7 @@
                                 font-size: 20pt
                             p
                                 color: $orange
-                                font-size: 8pt               
+                                font-size: 8pt
                                 padding-top: -10px
         .aside-5
             grid-area: 4 / 5 / 7 / 7
@@ -280,42 +265,61 @@
             &:hover
                 background: $blue_dark
             .clock,
-            .calendar    
+            .calendar
                 top: 0
                 left: 0
                 width: 100%
                 height: 50px
+                line-height: 50px
                 position: absolute
                 span
                     font-size: 25pt
                     color: $blue_light
                     font-weight: $weight_bold
-                #s 
-                    font-size: 15pt  
+                #s
+                    font-size: 15pt
                 .ponto
                     animation: fadeIn 1s infinite
                     @keyframes fadeIn
                         0%
                             opacity: 1
                         50%
-                            opacity: 0.3    
+                            opacity: 0.3
                         100%
-                            opacity: 1     
+                            opacity: 1
             .calendar
                 gap: 6px
-                right: 0    
+                right: 0
                 top: 32px
                 bottom: 0px
                 display: flex
                 align-items: center
                 justify-content: center
-                span 
-                    font-size: 10pt 	
+                span
+                    font-size: 10pt
                     color: #faf
-                    font-weight: $weight_medium    
+                    font-weight: $weight_medium
                 #w
                     color: #00ffe7
                     text-transform: uppercase
                     font-weight: $weight_light
         .aside-8
-            grid-area: 5 / 9 / 6 / 11                             
+            gap: 5px
+            display: grid
+            flex-direction: column
+            grid-area: 5 / 9 / 6 / 11
+            grid-template-columns: 30% 70%
+            .tempo
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: 35pt
+                font-weight: $weight_extral_bold
+                grid-area: 1 / 1 / 3 / 2
+            .icon
+                font-size: 4pt
+                grid-area: 1 / 2 / 2 / 3
+            .humidade
+                grid-area: 1 / 2 / 2 / 3
+            .city
+                grid-area: 2 / 2 / 3 / 3

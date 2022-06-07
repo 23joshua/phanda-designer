@@ -6,13 +6,15 @@ const minify = require('gulp-clean-css')
 const terser = require('gulp-terser')
 const imagemin = require('gulp-imagemin')
 const imagewebp = require('gulp-webp')
+const sourcemaps = require('gulp-sourcemaps')
+const concat = require('gulp-concat')
 
 // create functions
 function compilescss() {
   return src('src/sass/**/*.sass')
-      .pipe(sass())
-      .pipe(prefix('last 2 versions'))
-      .pipe(minify())
+    .pipe(sass())
+    .pipe(prefix('last 2 versions'))
+    .pipe(minify())
     .pipe(dest('assets/css/'))
 }
 
@@ -20,7 +22,7 @@ function compilescss() {
 function optimizeimg() {
   return src('src/img/**/*.{jpg,png,svg,gif}') // change to your source directory
     .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
+      imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 80, progressive: true }),
       imagemin.optipng({ optimizationLevel: 5 }),
     ]))
@@ -30,26 +32,22 @@ function optimizeimg() {
 // webpimages
 function webpImage() {
   return src('assets/img/**/*.{jpg,png,svg,gif}')
-  .pipe(imagewebp())
-  .pipe(dest('assets/img/'))
+    .pipe(imagewebp())
+    .pipe(dest('assets/img/'))
 }
 
-//optimize and move images
-// function webpImage() {
-//   return src('assets/img/*.{jpg,png,svg,gif}') // change to your source directory
-//     .pipe(imagewebp())
-//     .pipe(dest('assets/img/')) // change to your final/public directory
-// };
-
 // minify js
-function jsmin(){
-  return src('src/js/**/*.js') // change to your source directory
+function jsmin() {
+  return src('src/js/*.js') // change to your source directory
+    .pipe(sourcemaps.init())
     .pipe(terser())
+    .pipe(concat('main.js'))
+    .pipe(sourcemaps.write('./'))
     .pipe(dest('assets/js/')); // change to your final/public directory
 }
 
 //watchtask
-function watchTask(){
+function watchTask() {
   watch('src/sass/**/*.sass', compilescss); // change to your source directory
   watch('src/js/**/*.js', jsmin); // change to your source directory
   watch('src/img/**/*', optimizeimg); // change to your source directory

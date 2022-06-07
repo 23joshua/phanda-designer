@@ -3,45 +3,39 @@
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
 
 .servic
-    width: 20%
-    height: 100vh
-    z-index: $index-small
     @include background_image('bg-servic.webp')
-    &::after
-        top: 0
-        left: 200%
-        right: 0
-        bottom: 0
-        content: ''
-        width: 300%
-        height: 100vh
-        position: absolute
-        z-index: $index-xsmall
-        background: rgba(0, 0, 0, 0.6)
     .content-servic
+        top: 10vh
         gap: 20px
-        width: 100%
-        height: 78vh
+        height: 83vh
         display: flex
+        // align-items: center
         flex-wrap: wrap
-        margin-top: 100px
+        position: relative
         justify-content: center
+        @include breakpoint($screen_extral_large)
+            top: 25vh
+            height: 50vh
         .card
             width: 40%
-            height: 250px
+            height: 272px
             display: flex
             background: $white
             overflow: initial
+            align-items: center
             position: relative
             z-index: $index_small
+            @include breakpoint($screen_extral_large)
+                width: calc(50% - 20px)
+            @include breakpoint($screen_medium)
+                width: 100%
             &:hover
                 figure
-                    left: -75px
+                    left: - 75px
                     width: 150px
                     height: 150px
                     position: relative
                     background: $orange
-                    top: calc(50% - 75px)
                     z-index: $index_large
                     transition: 0.5s ease-in-out, background 1s ease-in-out
                     &::before
@@ -49,7 +43,7 @@
                         font-size: 1.2rem
                         color: rgba(255, 255, 255, .5)
                 img
-                    height: 75px    
+                    height: 75px
                     max-width: 75px
             figure
                 top: 0
@@ -57,6 +51,7 @@
                 width: 100%
                 height: 100%
                 display: flex
+                cursor: pointer
                 overflow: hidden
                 position: absolute
                 background: #333
@@ -79,13 +74,14 @@
                 img
                     height: 200px
                     max-width: 200px
-                    transition: 0.5s ease-in-out    
+                    transition: 0.5s ease-in-out
             .content
-                position: absolute
-                right: 0 
+                top: 0
+                right: 0
                 height: 100%
                 padding: 20px
                 display: flex
+                position: absolute
                 width: calc(100% - 75px)
                 h3
                     font-size: 16pt
@@ -95,9 +91,9 @@
                     font-weight: $weight_extral_bold
                 p
                     color: #999
-                    font-size: 11pt 
-                    font-weight: $weight_regular    
+                    font-size: 11pt
+                    font-weight: $weight_regular
                 .btn_phanda
                     top: 24px
                     span
-                        z-index: $index_small       
+                        z-index: $index_small

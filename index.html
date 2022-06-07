@@ -1,445 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/img/camera-fotografica.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/camera-fotografica.png"
+    />
     <title>Phanda Designer</title>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="content-header">
-                <div class="logo">
-                    <h1><a href="#banner">logo</a></h1>
-                </div>
-                <a class="btn-bars">
-                    <!-- <img src="assets/img/icon_svg/grid-outline.svg" alt=""> -->
-                </a>
-                <nav class="nav">
-                    <a href="#banner" data-text="home" class="a_link link_active" >home</a>
-                    <a href="#about" data-text="sobre" class="a_link" >sobre</a>
-                    <a href="#gallery" data-text="galeria" class="a_link" >galeria</a>
-                    <a href="#servic" data-text="serviços" class="a_link" >serviços</a>
-                    <a href="#blog" data-text="blog" class="a_link" >blog</a>
-                    <a href="#contact" data-text="contacto" class="a_link" >contacto</a>
-                </nav>
-            </div>
-        </div>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="logo">
+        <h1><a href="#home">logo</a></h1>
+      </div>
+      <div class="toggle">
+        <span class="toggle-box top-left"></span>
+        <span class="toggle-box top-right"></span>
+        <span class="toggle-box bottom-right"></span>
+        <span class="toggle-box bottom-left"></span>
+        <span class="toggle-box center"></span>
+      </div>
+      <nav class="nav">
+        <a href="#home" data-text="home" class="a_link link_active">home</a>
+        <a href="#about" data-text="about" class="a_link">sobre</a>
+        <a href="#gallery" data-text="gallery" class="a_link">galeria</a>
+        <a href="#servic" data-text="servic" class="a_link">serviços</a>
+        <a href="#blog" data-text="blog" class="a_link">blog</a>
+        <a href="#contact" data-text="contact" class="a_link">contacto</a>
+      </nav>
     </header>
     <main class="main">
-        <article class="banner" id="banner">
-            <div class="container">
-                <div class="content-banner">
-                    <div class="title-banner">
-                        <h1>fast & affective</h1>
-                        <h2>solution with unitech</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Iure aspernatur optio et sunt modi libero dolorum error explicabo alias adipisci?
-                        </p>
-                        <!-- <a href="" class="btn btn_phanda"> get started</a> -->
-                        <a href="" class="btn_phanda"><span>button</span><i></i></a>
-                    </div>
-                    <div class="gallery">
-                        <figure class="figure-01">
-                            <img src="assets/img/img-01.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-02">
-                            <img src="assets/img/img-05.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-03">
-                            <img src="assets/img/01.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-04">
-                            <img src="assets/img/img-02.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-05">
-                            <img src="assets/img/img-01.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-06">
-                            <img src="assets/img/img-02.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                    </div>
+      <article class="home main_content main_active" id="home">
+        <div class="container content">
+          <div class="title-banner">
+            <h1>fast & affective</h1>
+            <h2>solution with unitech</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+              aspernatur optio et sunt modi libero dolorum error explicabo alias
+              adipisci?
+            </p>
+            <a href="" class="btn_phanda"><span>button</span><i></i></a>
+          </div>
+          <div class="gallery">
+            <figure class="figure-01">
+              <img src="assets/img/img-01.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-02">
+              <img src="assets/img/img-05.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-03">
+              <img src="assets/img/01.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-04">
+              <img src="assets/img/img-02.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-05">
+              <img src="assets/img/img-01.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-06">
+              <img src="assets/img/img-02.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      <article class="about main_content" id="about">
+        <div class="container content"></div>
+      </article>
+      <article class="gallery-home main_content" id="gallery">
+        <div class="container content">
+          <div class="gallery">
+            <aside>
+              <nav>
+                <a href="#" data-text="todos" class="a_link a_color_1">todos</a>
+                <a href="#" data-text="casamento" class="a_link a_color_2"
+                  >casamento</a
+                >
+                <a href="#" data-text="aniversário" class="a_link a_color_3"
+                  >aniversário</a
+                >
+                <a href="#" data-text="shoots" class="a_link a_color_4"
+                  >shoots</a
+                >
+                <a href="#" data-text="baptismo" class="a_link a_color_5"
+                  >baptismo</a
+                >
+                <a href="#" data-text="outros" class="a_link a_color_6"
+                  >outros</a
+                >
+              </nav>
+            </aside>
+            <figure class="figure-01">
+              <img src="assets/img/img-01.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-02">
+              <img src="assets/img/img-05.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-03">
+              <img src="assets/img/01.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-06">
+              <img src="assets/img/img-04.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-04">
+              <img src="assets/img/img-02.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-05">
+              <img src="assets/img/img-01.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-07">
+              <img src="assets/img/img-03.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+            <figure class="figure-08">
+              <img src="assets/img/img-05.webp" alt="" />
+              <i></i>
+              <figcaption>
+                <img src="assets/img/icon_svg/heart-outline.svg" alt="" />
+                <img src="assets/img/icon_svg/image.svg" alt="" />
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      <section class="servic main_content" id="servic">
+        <div class="container content-servic">
+          <article class="card">
+            <figure data-text="estudio">
+              <img src="assets/img/phanda.webp" alt="" />
+            </figure>
+            <div class="content">
+              <div>
+                <h3>estudio</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, qui? Sint saepe animi impedit libero incidunt,
+                  deserunt iure asperiores vitae mollitia recusandae quibusdam
+                  fugiat. Minus, pariatur dolorem! Quia, magnam praesentium!
+                </p>
+                <a href="" class="btn_phanda"><span>read more</span><i></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <figure data-text="estudio">
+              <img src="assets/img/phanda-02.webp" alt="" />
+            </figure>
+            <div class="content">
+              <div>
+                <h3>estudio</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, qui? Sint saepe animi impedit libero incidunt,
+                  deserunt iure asperiores vitae mollitia recusandae quibusdam
+                  fugiat. Minus, pariatur dolorem! Quia, magnam praesentium!
+                </p>
+                <a href="" class="btn_phanda"><span>read more</span><i></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <figure data-text="festa">
+              <img src="assets/img/phanda-03.webp" alt="" />
+            </figure>
+            <div class="content">
+              <div>
+                <h3>festa</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Vitae, voluptate dicta dolore, nulla sunt rerum cum est
+                  provident quibusdam architecto cupiditate, sit ab! Distinctio
+                  tenetur minus nobis quibusdam! Beatae, inventore?
+                </p>
+                <a href="" class="btn_phanda"><span>read more</span><i></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <figure data-text="Casamento">
+              <img src="assets/img/phanda-04.webp" alt="" />
+            </figure>
+            <div class="content">
+              <div>
+                <h3>Casamento</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates reiciendis voluptatem omnis et, doloremque odit
+                  nulla repellat consequatur pariatur impedit ut, numquam
+                  nostrum sed libero repellendus. Architecto commodi porro
+                  velit.
+                </p>
+                <a href="" class="btn_phanda"> <span>read more</span><i></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="blog main_content" id="blog">
+        <div class="container content">
+          <article class="article-1">
+            <figure>
+              <div>
+                <img src="assets/img/blog-3.webp" alt="" />
+              </div>
+              <figcaption>
+                <ul>
+                  <li class="date-blog">
+                    <h5>20</h5>
+                    <h6>maio</h6>
+                  </li>
+                  <li class="icon-link">
+                    <ul>
+                      <li>
+                        <a href=""><ion-icon name="eye-outline"></ion-icon></a>
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="heart-outline"></ion-icon
+                        ></a>
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="chatbubbles-outline"></ion-icon
+                        ></a>
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="share-social-outline"></ion-icon
+                        ></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="content-blog">
+              <header>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <figure>
+                  <img src="assets/img/img-01.webp" alt="" />
+                  <figcaption><p>autor</p></figcaption>
+                </figure>
+              </header>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis obcaecati dignissimos ab at dicta illum pariatur
+                  tempore maxime adipisci, veniam cupiditate itaque.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="article-2">
+            <figure>
+              <div>
+                <img src="assets/img/blog-02.webp" alt="" />
+              </div>
+              <figcaption>
+                <ul>
+                  <li class="date-blog">
+                    <h5>20</h5>
+                    <h6>maio</h6>
+                  </li>
+                  <li class="icon-link">
+                    <ul>
+                      <li>
+                        <a href=""><ion-icon name="eye-outline"></ion-icon></a>
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="heart-outline"></ion-icon
+                        ></a>
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="chatbubbles-outline"></ion-icon
+                        ></a>
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="share-social-outline"></ion-icon
+                        ></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="content-blog">
+              <header>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <figure>
+                  <img src="assets/img/img-03.webp" alt="" />
+                  <figcaption><p>autor</p></figcaption>
+                </figure>
+              </header>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis obcaecati dignissimos ab at dicta illum pariatur
+                  tempore maxime adipisci, veniam cupiditate itaque
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="article-3">
+            <figure>
+              <div>
+                <img src="assets/img/blog-02.webp" alt="" />
+              </div>
+              <figcaption>
+                <ul>
+                  <li class="date-blog">
+                    <h5>20</h5>
+                    <h6>maio</h6>
+                  </li>
+                  <li class="icon-link">
+                    <ul>
+                      <li>
+                        <a href="">
+                          <ion-icon name="eye-outline"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <ion-icon name="heart-outline"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <ion-icon name="share-social-outline"></ion-icon>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="content-blog">
+              <header>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <figure>
+                  <img src="assets/img/img-03.webp" alt="" />
+                  <figcaption>
+                    <p>autor</p>
+                  </figcaption>
+                </figure>
+              </header>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis obcaecati dignissimos ab at dicta illum pariatur
+                  tempore maxime adipisci, veniam cupiditate itaque
+                </p>
+              </div>
+            </div>
+          </article>
+          <aside class="aside-3">
+            <div class="container-profile">
+              <header>
+                <figure>
+                  <img src="assets/img/01.jpg" alt="" />
+                </figure>
+                <p class="name">nome</p>
+                <p class="about-blog">Lorem, ipsum dolor.</p>
+              </header>
+              <div class="content-profile">
+                <div class="link-social">
+                  <a href="" class="">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                  <a href="" class="">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                  <a href="" class="">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                  </a>
                 </div>
+                <a href="" class="btn_phanda"><span>sobre nós</span><i></i></a>
+              </div>
+              <footer>
+                <ul class="">
+                  <li>
+                    <span>1</span>
+                    <p>post</p>
+                  </li>
+                  <li>
+                    <span>2</span>
+                    <p>following</p>
+                  </li>
+                  <li>
+                    <span>3</span>
+                    <p>followers</p>
+                  </li>
+                </ul>
+              </footer>
             </div>
-        </article>
-        <article class="about" id="about">
-                <p>about</p>
-        </article> 
-        <article class="gallery-home" id="gallery">
-            <div class="container">
-                <div class="content-gallery">
-                    <div class="gallery">
-                        <aside>
-                            <nav>
-                                <a href="#" data-text="todos" class="a_link a_color_1 link_active">todos</a>
-                                <a href="#" data-text="casamento" class="a_link a_color_2">casamento</a>
-                                <a href="#" data-text="aniversário" class="a_link a_color_3">aniversário</a>
-                                <a href="#" data-text="shoots" class="a_link a_color_4">shoots</a>
-                                <a href="#" data-text="baptismo" class="a_link a_color_5">baptismo</a>
-                                <a href="#" data-text="outros" class="a_link a_color_6">outros</a>
-                            </nav>
-                        </aside>
-                        <figure class="figure-01">
-                            <img src="assets/img/img-01.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-02">
-                            <img src="assets/img/img-05.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-03">
-                            <img src="assets/img/01.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-06">
-                            <img src="assets/img/img-04.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-04">
-                            <img src="assets/img/img-02.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-05">
-                            <img src="assets/img/img-01.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-07">
-                            <img src="assets/img/img-03.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                        <figure class="figure-08">
-                            <img src="assets/img/img-05.webp" alt="">
-                            <i></i>
-                            <figcaption>
-                                <img src="assets/img/icon_svg/heart-outline.svg" alt="">
-                                <img src="assets/img/icon_svg/image.svg" alt="">
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
+          </aside>
+          <aside class="aside-5"></aside>
+          <aside class="aside-6">
+            <figure>
+              <img src="assets/img/img-01.webp" alt="" />
+            </figure>
+          </aside>
+          <aside class="aside-7">
+            <div class="clock" id="clock">
+              <span id="h"></span>
+              <span class="ponto">:</span>
+              <span id="m"></span>
+              <span class="ponto">:</span>
+              <span id="s"></span>
             </div>
-        </article>
-        <section class="servic" id="servic">
-            <div class="container">
-                <div class="content-servic">
-                    <article class="card">
-                        <figure data-text="estudio">
-                            <img src="assets/img/phanda.webp" alt="">
-                        </figure>
-                        <div class="content">
-                            <div>
-                                <h3>estudio</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, qui? Sint saepe animi impedit libero incidunt, deserunt iure asperiores vitae 
-                                    mollitia recusandae quibusdam fugiat. Minus, pariatur dolorem! Quia, magnam praesentium!</p>
-                                <a href="" class="btn_phanda"><span>read more</span><i></i></a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <figure data-text="estudio">
-                            <img src="assets/img/phanda-02.webp" alt="">
-                        </figure>
-                        <div class="content">
-                            <div>
-                                <h3>estudio</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, qui? Sint saepe animi impedit libero incidunt, deserunt iure asperiores vitae 
-                                    mollitia recusandae quibusdam fugiat. Minus, pariatur dolorem! Quia, magnam praesentium!</p>
-                                <a href="" class="btn_phanda"><span>read more</span><i></i></a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <figure data-text="festa">
-                            <img src="assets/img/phanda-03.webp" alt="">
-                        </figure>
-                        <div class="content">
-                            <div>
-                                <h3>festa</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, voluptate dicta dolore, nulla sunt rerum cum est provident quibusdam 
-                                    architecto cupiditate, sit ab! Distinctio tenetur minus nobis quibusdam! Beatae, inventore?</p>
-                                <a href="" class="btn_phanda"><span>read more</span><i></i></a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <figure data-text="Casamento">
-                            <img src="assets/img/phanda-04.webp" alt="">
-                        </figure>
-                        <div class="content">
-                            <div>
-                                <h3>Casamento</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reiciendis voluptatem omnis et, doloremque odit nulla repellat consequatur pariatur 
-                                    impedit ut, numquam nostrum sed libero repellendus. Architecto commodi porro velit.</p>
-                                <a href="" class="btn_phanda"> <span>read more</span><i></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+            <div class="calendar" id="calendar">
+              <span id="w"></span>
+              <span id="d"></span>
+              <span>/</span>
+              <span id="mm"></span>
+              <span>/</span>
+              <span id="y"></span>
             </div>
-        </section>
-        <section class="blog" id="blog">
-            <div class="container">
-                <div class="content-blog">
-                    <article class="article-1">
-                        <figure>
-                            <div>
-                                <img src="assets/img/blog-3.webp" alt="">
-                            </div>
-                            <figcaption>
-
-                                <ul>
-                                    <li class="date-blog">
-                                        <h5>20</h5>
-                                        <h6>maio</h6>
-                                    </li>
-                                    <li class="icon-link">
-                                        <ul>
-                                            <li><a href=""><ion-icon name="eye-outline"></ion-icon></a></li>
-                                            <li><a href=""><ion-icon name="heart-outline"></ion-icon></a></li>
-                                            <li><a href=""><ion-icon name="chatbubbles-outline"></ion-icon></a></li>
-                                            <li><a href=""><ion-icon name="share-social-outline"></ion-icon></a></li>
-                                        </ul>
-                                </li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                        <div class="content">
-                            <header>
-                                <h1>Lorem ipsum dolor sit amet.</h1>
-                                <figure>
-                                    <img src="assets/img/img-01.webp" alt="">
-                                    <figcaption><p>autor</p></figcaption>
-                                </figure>
-                            </header>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati dignissimos ab at dicta illum pariatur tempore maxime adipisci, 
-                                    veniam cupiditate itaque.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-2">
-                        <figure>
-                            <div>
-                                <img src="assets/img/blog-02.webp" alt="">
-                            </div>
-                            <figcaption>
-
-                                <ul>
-                                    <li class="date-blog">
-                                        <h5>20</h5>
-                                        <h6>maio</h6>
-                                    </li>
-                                    <li class="icon-link">
-                                        <ul>
-                                            <li><a href=""><ion-icon name="eye-outline"></ion-icon></a></li>
-                                            <li><a href=""><ion-icon name="heart-outline"></ion-icon></a></li>
-                                            <li><a href=""><ion-icon name="chatbubbles-outline"></ion-icon></a></li>
-                                            <li><a href=""><ion-icon name="share-social-outline"></ion-icon></a></li>
-                                        </ul>
-                                </li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                        <div class="content">
-                            <header>
-                                <h1>Lorem ipsum dolor sit amet.</h1>
-                                <figure>
-                                    <img src="assets/img/img-03.webp" alt="">
-                                    <figcaption><p>autor</p></figcaption>
-                                </figure>
-                            </header>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati dignissimos ab at dicta illum pariatur tempore maxime adipisci, 
-                                    veniam cupiditate itaque</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-3">
-                        <figure>
-                            <div>
-                                <img src="assets/img/blog-02.webp" alt="">
-                            </div>
-                            <figcaption>
-                    
-                                <ul>
-                                    <li class="date-blog">
-                                        <h5>20</h5>
-                                        <h6>maio</h6>
-                                    </li>
-                                    <li class="icon-link">
-                                        <ul>
-                                            <li><a href="">
-                                                    <ion-icon name="eye-outline"></ion-icon>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <ion-icon name="heart-outline"></ion-icon>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <ion-icon name="chatbubbles-outline"></ion-icon>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <ion-icon name="share-social-outline"></ion-icon>
-                                                </a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                        <div class="content">
-                            <header>
-                                <h1>Lorem ipsum dolor sit amet.</h1>
-                                <figure>
-                                    <img src="assets/img/img-03.webp" alt="">
-                                    <figcaption>
-                                        <p>autor</p>
-                                    </figcaption>
-                                </figure>
-                            </header>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis obcaecati dignissimos ab at dicta illum
-                                    pariatur tempore maxime adipisci,
-                                    veniam cupiditate itaque</p>
-                            </div>
-                        </div>
-                    </article>
-                    <aside class="aside-3">
-                        <div class="container-profile">
-                            <header>
-                                <figure>
-                                    <img src="assets/img/01.jpg" alt="">
-                                </figure>
-                                <p class="name">nome</p>
-                                <p class="about-blog">Lorem, ipsum dolor.</p>
-                            </header>
-                            <div class="content-profile">
-                                <div class="link-social">
-                                    <a href="" class="">
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                    </a>
-                                    <a href="" class="">
-                                        <ion-icon name="logo-instagram"></ion-icon>
-                                    </a>
-                                    <a href="" class="">
-                                        <ion-icon name="logo-whatsapp"></ion-icon>
-                                    </a>
-                                </div>
-                                <a href="" class="btn_phanda"><span>sobre nós</span><i></i></a>
-                            </div>
-                            <footer>
-                                <ul class="">
-                                    <li><span>1</span>
-                                        <p> post</p>
-                                    </li>
-                                    <li><span>2</span>
-                                        <p> following</p>
-                                    </li>
-                                    <li><span>3</span>
-                                        <p> followers</p>
-                                    </li>
-                                </ul>
-                            </footer>
-                        </div>
-                    </aside>
-                    <aside class="aside-5"></aside>
-                    <aside class="aside-6">
-                        <figure>
-                            <img src="assets/img/img-01.webp" alt="">
-                        </figure>
-                    </aside>
-                    <aside class="aside-7">
-                        <div class="clock" id="clock">
-                            <span id="h"></span>
-                            <span class="ponto">:</span>
-                            <span id="m"></span>
-                            <span class="ponto">:</span>
-                            <span id="s"></span>
-                        </div>
-                        <div class="calendar" id="calendar">
-                            <span id="w"></span>
-                            <span id="d"></span>
-                            <span >/</span>
-                            <span id="mm"></span>
-                            <span >/</span>
-                            <span id="y"></span>
-                        </div>
-                    </aside>
-                    <aside class="aside-8">
-                        Previsão do tempo
-                    </aside>
-                </div>
-            </div>
-        </section>
-        <article class="contact" id="contact">
-            <div class="container">
-                <h1><span>oi</span></h1>
-            </div>
-        </article>
+          </aside>
+          <aside class="aside-8">
+            <div class="tempo"></div>
+            <div class="icon"></div>
+            <div class="humidade"></div>
+            <div class="city"></div>
+          </aside>
+        </div>
+      </section>
+      <article class="contact main_content" id="contact">
+        <div class="container content">
+          <h1><span>oi</span></h1>
+        </div>
+      </article>
     </main>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/watch.js"></script>
-</body>
+    <footer class="footer container">
+      <p class="rightFooter">
+        &copy JS Brilliant Mind | <span>2022 for Phanda Designer</span>
+      </p>
+      <div class="social-footer">
+        <a href="" target="_blank">o</a>
+        <a href="" target="_blank">o</a>
+        <a href="" target="_blank">o</a>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
